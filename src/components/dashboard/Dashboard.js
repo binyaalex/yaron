@@ -251,7 +251,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className="balanceBox"
                 style={{
                   backgroundImage: "url(" + Art + ")",
@@ -264,9 +264,9 @@ export default function Dashboard() {
                     {user?.credit?.toFixed(1) || 0} {t("e-credit")}
                   </h6>
                 </div>
-              </div>
+              </div> */}
 
-              <CouponsList />
+              {/* <CouponsList /> */}
 
               {/* <div className="row align-items-center">
                 <div className="col-7">
@@ -320,7 +320,7 @@ export default function Dashboard() {
             </ScrollingCarousel> */}
           </div>
           {/*<ScrollingCarousel>*/}
-          <Tabs
+          {/* <Tabs
             defaultSelectedIndex={0}
             className="categoriesSliderTabs"
             onChange={handleChange}
@@ -336,10 +336,10 @@ export default function Dashboard() {
                     {category.title}
                   </Tab>
                 ))}
-          </Tabs>
+          </Tabs> */}
           {/*</ScrollingCarousel>*/}
 
-          <div className="product-block">
+          {/* <div className="product-block">
             <ul className="product-Module">
               {filterProducts.length > 0
                 ? currentFilterProducts.map((product) => (
@@ -397,24 +397,24 @@ export default function Dashboard() {
                                   </>
                                 )}
                               </span>
-                            </div>
+                            </div> */}
                             {/*<h5 className="product-box__name">*/}
                             {/*  3 {t("boxSimple")}{" "}*/}
                             {/*</h5>*/}
-                          </div>
+                          {/* </div>
                         </div>
                       </li>
                     </>
                   ))
                 : t("No products")}
-            </ul>
+            </ul> */}
             {/* <ChatBot /> */}
-            <Pagination
+            {/* <Pagination
               productsPerPage={productsPerPage}
               totalProducts={filterProducts.length}
               paginate={paginate}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -1,15 +1,35 @@
-import React from "react";
+import {useEffect, useState} from 'react';
+import { isBrowser, isMobile } from 'react-device-detect';
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/swiper.min.css";
 
 import noImage from "../../assets/images/noimage.png";
 
 function OnlyCategoryList({ divClassName, h5ClassName, categories, slider }) {
-  // console.log(categories);
   const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  let categoryWidth = "363px"
+  if (isMobile) {
+    categoryWidth = windowSize.innerWidth*0.9
+  }
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   return (
     <>
@@ -19,6 +39,14 @@ function OnlyCategoryList({ divClassName, h5ClassName, categories, slider }) {
             freeMode={true}
             slidesPerView={"auto"}
             spaceBetween={10}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            modules={[ Autoplay, Pagination ]}
             style={{ direction: "ltr" }}
           >
             {categories
@@ -38,7 +66,7 @@ function OnlyCategoryList({ divClassName, h5ClassName, categories, slider }) {
                       className={divClassName}
                       style={{
                         backgroundImage: `url(${category.image || noImage})`,
-                        width: "363px",
+                        width: categoryWidth,
                         cursor: "pointer",
                       }}
                     >
@@ -77,6 +105,11 @@ function OnlyCategoryList({ divClassName, h5ClassName, categories, slider }) {
       )}
     </>
   );
+}
+
+function getWindowSize() {
+  const {innerWidth, innerHeight} = window;
+  return {innerWidth, innerHeight};
 }
 
 export default OnlyCategoryList;
