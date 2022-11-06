@@ -1,6 +1,7 @@
 .dashboard-tamplate {
   padding-bottom: 20px;
   overflow-x: hidden;
+  padding: 0 15px;
 }
 
 ul {
@@ -359,7 +360,7 @@ div[data-arrow="right"] {
 }
 
 .caseback-image {
-  width: 70%;
+  width: 55%;
 }
 
 .caseback-image img {

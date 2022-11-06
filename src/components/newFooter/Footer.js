@@ -45,7 +45,7 @@ const Footer = () => {
 
   return (
     <>
-      <BrowserView>
+      {/* <BrowserView>
         <div className="webFooter">
           <div className="customizer border-left-blue-grey border-left-lighten-4">
             <div className="customizer-toggle box-shadow-3">
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
       </BrowserView>
-      <MobileView>
+      <MobileView> */}
         <div>
           <footer className="footer">
             <div className="sosAndGray">
@@ -87,7 +87,7 @@ const Footer = () => {
             </div>
           </footer>
         </div>
-      </MobileView>
+      {/* </MobileView> */}
     </>
   );
 };

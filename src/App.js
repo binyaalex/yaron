@@ -60,6 +60,8 @@ function App(props) {
   }, [dispatch]); // eslint-disable-line
 
   return (
+    <div className="PageDad">
+    <div className="Page">
     <div className={isChatOpen ? "activeChat" : ""}>
       <ToastContainer />
       <BrowserRouter>
@@ -110,6 +112,8 @@ function App(props) {
         </Routes>
         <Footer />
       </BrowserRouter>
+    </div>
+    </div>
     </div>
   );
 }
