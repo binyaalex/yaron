@@ -47,28 +47,23 @@ function OtherCategories({ categories, slider }) {
               })}
           </Swiper>
         ) : (
-          <>
-            {/* {categories
+          <div className="otherCategoriesDiv">
+            {categories
               .filter((category) => !category.parent)
               .map((category, index) => {
                 return (
-                  <li
-                    key={index}
-                    onClick={() => {
-                      navigate(`/category/${category.id}`, {
-                        state: { id: category.id },
-                      });
-                    }}
-                    className={divClassName}
+                  <div
+                    className="otherCategory"
                     style={{
-                      backgroundImage: `url(${category.image || noImage})`,
+                      cursor: "pointer",
                     }}
                   >
-                    <h5 className={h5ClassName}>{category.title}</h5>
-                  </li>
+                    {category.icon}
+                    <h5 className="otherCategoryTitle">{category.title}</h5>
+                  </div>
                 );
-              })} */}
-          </>
+              })}
+          </div>
         )
       ) : (
         t("No categories")

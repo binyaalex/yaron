@@ -8,11 +8,33 @@ import Tab from "@mui/material/Tab";
 
 import { getMerchants } from "../../redux/actions-exporter";
 
-export default function VendorList(props) {
+import hotBenefit1 from '../../assets/images/hotBenefit1.png'
+
+export default function HotBenefitList(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const merchants = useSelector((state) => state.merchant.merchants);
+  const hotBenefitsArr = [
+    {
+        title: "עידן אלתרמן",
+        price: 79,
+        image: hotBenefit1,
+        category: "סטנדאפ",
+    },
+    {
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+    },
+    {
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+    },
+  ]
   useEffect(() => {
     dispatch(getMerchants());
   }, [dispatch]); // eslint-disable-line
@@ -56,7 +78,7 @@ export default function VendorList(props) {
     <>
       <div className="row align-items-center">
         <div className="col-7">
-          <h6 className="module-heading__title">{t(props.storesText)}</h6>
+          <h6 className="module-heading__title">ההטבות החמות</h6>
         </div>
         <div
           className="col-5 text-right isLink"
@@ -72,7 +94,7 @@ export default function VendorList(props) {
         </div>
       </div>
 
-      <Tabs
+      {/* <Tabs
         defaultSelectedIndex={0}
         className="categoriesSliderTabs"
         // onChange={handleChange}
@@ -86,30 +108,31 @@ export default function VendorList(props) {
               {category.title}
             </Tab>
           ))}
-      </Tabs>
+      </Tabs> */}
 
       <ScrollingCarousel>
         <ul className="categoryList">
-          {merchants.length > 0
-            ? merchants.map((item) => (
+          {hotBenefitsArr.length > 0
+            ? hotBenefitsArr.map((item) => (
                 <>
                   <li
-                    onClick={() => {
-                      navigate(`/vendor/${item.id}`, {
-                        state: { id: item.id },
-                      });
-                    }}
-                    className="categoryList__block isLink"
+                    // onClick={() => {
+                    //   navigate(`/vendor/${item.id}`, {
+                    //     state: { id: item.id },
+                    //   });
+                    // }}
+                    className="hotBenefit isLink"
                   >
-                    <div className="category-box text-center">
-                      <div className="category-box__img">
-                        <img
-                          src={item.image}
-                          className="img-fluid"
-                          alt="My Awesome"
-                        />
-                      </div>
-                      <h6 className="category-box__title">{item.title}</h6>
+                    <div className="hotBenefitImg">
+                      <img
+                        src={item.image}
+                        alt="My Awesome"
+                      />
+                      <div className="hotBenefitCategory">{item.category}</div>
+                    </div>
+                    <div className="hotBenefitContent">
+                      <h6 className="hotBenefitTitle">{item.title}</h6>
+                      <h6 className="hotBenefitPrice">{item.price} ₪</h6>
                     </div>
                   </li>
                 </>

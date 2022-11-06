@@ -15,7 +15,7 @@ import {
   getProductCategories,
 } from "../../redux/actions-exporter";
 import CouponsList from "../couponsList";
-import VendorList from "./VendorList";
+import HotBenefitList from "./HotBenefitList";
 
 import Art from "../../assets/images/art.jpg";
 import "./dashboard.css";
@@ -23,24 +23,15 @@ import Pagination from "./pagination";
 import OtherCategories from "./otherCategories/OtherCategories";
 
 //icons
-import { MdLocalLaundryService } from "react-icons/md";
-import { GiConverseShoe } from "react-icons/gi";
-import { GiRunningShoe } from "react-icons/gi";
-import { GiLargeDress } from "react-icons/gi";
-import { GiClothes } from "react-icons/gi";
-import { GiKitchenKnives } from "react-icons/gi";
-import { RiShirtFill } from "react-icons/ri";
-import { GiFlipFlops } from "react-icons/gi";
-import { MdLocalPharmacy } from "react-icons/md";
-import { ImBooks } from "react-icons/im";
-import { GiSoccerBall } from "react-icons/gi";
-import { GiHighHeel } from "react-icons/gi";
-import { MdCleanHands } from "react-icons/md";
-import { GiLipstick } from "react-icons/gi";
-import { MdFastfood } from "react-icons/md";
-import { GiSteeltoeBoots } from "react-icons/gi";
+import { FaTheaterMasks } from "react-icons/fa";
+import { MdAttractions } from "react-icons/md";
+import { GiPopcorn } from "react-icons/gi";
+import { MdRoomService } from "react-icons/md";
+import { TbMassage } from "react-icons/tb";
+import { FaUmbrellaBeach } from "react-icons/fa";
+import { RiPriceTagFill } from "react-icons/ri";
 import { MdToys } from "react-icons/md";
-import { BsWatch } from "react-icons/bs";
+import { HiLightBulb } from "react-icons/hi";
 
 const screenWidth = window.innerWidth;
 let makeProductsPerPage = 0;
@@ -130,95 +121,41 @@ export default function Dashboard() {
 
   const otherCategoriesArr = [
     {
-      title: t("Appliances"),
-      icon: <MdLocalLaundryService />,
-      id: 17,
+      title: t("performances"),
+      icon: <FaTheaterMasks />,
     },
     {
-      title: t("Kids shoes"),
-      icon: <GiConverseShoe />,
-      id: 11,
+      title: t("attractions"),
+      icon: <MdAttractions />,
     },
     {
-      title: t("Mens shoes"),
-      icon: <GiRunningShoe />,
-      id: 12,
-    },
-    {
-      title: t("Girls dresses"),
-      icon: <GiLargeDress />,
-      id: 10,
-    },
-    {
-      title: t("kids clothes"),
-      icon: <GiClothes />,
-      id: 18,
-    },
-    {
-      title: t("Cookware"),
-      icon: <GiKitchenKnives />,
-      id: 2,
-    },
-    {
-      title: t("Mens clothes"),
-      icon: <RiShirtFill />,
-      id: 15,
-    },
-    {
-      title: t("Flip flops"),
-      icon: <GiFlipFlops />,
-      id: 13,
-    },
-    {
-      title: t("pharm"),
-      icon: <MdLocalPharmacy />,
-      id: 5,
-    },
-    {
-      title: t("books"),
-      icon: <ImBooks />,
-      id: 8,
-    },
-    {
-      title: t("sport"),
-      icon: <GiSoccerBall />,
-      id: 6,
-    },
-    {
-      title: t("women shoes"),
-      icon: <GiHighHeel />,
-      id: 16,
-    },
-    {
-      title: t("hygiene"),
-      icon: <MdCleanHands />,
-      id: 4,
-    },
-    {
-      title: t("care"),
-      icon: <GiLipstick />,
-      id: 1,
+      title: t("cinema"),
+      icon: <GiPopcorn />,
     },
     {
       title: t("food"),
-      icon: <MdFastfood />,
-      id: 3,
+      icon: <MdRoomService />,
     },
+    // {
+    //   title: t("spa&treatments"),
+    //   icon: <TbMassage />,
+    // },
     {
-      title: t("boots"),
-      icon: <GiSteeltoeBoots />,
-      id: 14,
+      title: t("vacation"),
+      icon: <FaUmbrellaBeach />,
     },
+    // {
+    //   title: t("benefitsToTheHouse"),
+    //   icon: <RiPriceTagFill />,
+    // },
     {
-      title: t("toys"),
+      title: t("children"),
       icon: <MdToys />,
-      id: 9,
     },
-    {
-      title: t("watches"),
-      icon: <BsWatch />,
-      id: 7,
-    },
+    // {
+    //   title: t("enrichment&subscriptions"),
+    //   icon: <HiLightBulb />,
+    // },
   ];
 
   return (
@@ -229,9 +166,9 @@ export default function Dashboard() {
         <div className="container">
           <div className="block-slider">
             <div className="module-heading">
-              <OtherCategories slider={true} categories={otherCategoriesArr} />
+              <OtherCategories slider={false} categories={otherCategoriesArr} />
 
-              <div className="featured-product">
+              {/* <div className="featured-product">
                 <div className="module-heading">
                   <div className="row align-items-center">
                     <div className="col-12">
@@ -249,7 +186,7 @@ export default function Dashboard() {
                     h5ClassName="featuredProduct-box__title"
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* <div
                 className="balanceBox"
@@ -285,7 +222,7 @@ export default function Dashboard() {
               </div> */}
             </div>
 
-            <VendorList isAllVendors={false} storesText={"stores"} />
+            <HotBenefitList isAllVendors={false} storesText={"stores"} />
 
             {/* <ScrollingCarousel>
               <ul className="categoryList">
