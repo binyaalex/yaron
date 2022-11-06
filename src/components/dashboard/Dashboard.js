@@ -205,7 +205,7 @@ export default function Dashboard() {
                 </div>
               </div> */}
 
-              {/* <CouponsList /> */}
+              <CouponsList />
 
               {/* <div className="row align-items-center">
                 <div className="col-7">

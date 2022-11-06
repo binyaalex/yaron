@@ -1,11 +1,11 @@
 html {
   --gray: #bdc4d1;
   --lightgray: #e1e4ea;
-  --primary: #00c4f8 !important;
+  --primary: #00386C !important;
+  --secondary: #00D7B6 !important;
   /* --lightblue: #17A2B8;
   --blue: #1976d2;
   --blue3: #007bff;
-    --secondary: #1AABE3;
     --blue2: #00a9d6;
     --dark: #00374d; */
 }

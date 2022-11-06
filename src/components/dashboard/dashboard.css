@@ -339,8 +339,8 @@ div[data-arrow="right"] {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  background: linear-gradient(98.57deg, #00386C -4.59%, #00D7B6 101.92%);
-  background-image: linear-gradient(to right, #014E82, #00D7B6);
+  background: linear-gradient(98.57deg, var(--primary) -4.59%, var(--secondary) 101.92%);
+  background-image: linear-gradient(to right, #014E82, var(--secondary));
   border-radius: 26px;
 }
 
@@ -570,7 +570,7 @@ div[data-arrow="right"] {
   line-height: 10px;
   text-align: center;
   padding: 4px;
-  color: #00386C
+  color: var(--secondary)
 }
 
 .hotBenefitContent {

@@ -7,6 +7,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { IoIosChatbubbles } from "react-icons/io";
+import { GrHomeRounded } from "react-icons/gr";
+// import { SlWallet } from "react-icons/si";
+// import { IoRestaurantOutline } from "react-icons/io";
+import { AiOutlineGift } from "react-icons/ai";
+
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import StoreMallDirectoryIcon from "@mui/icons-material/StoreMallDirectory";
 import chatIcon from "../../assets/images/footer/chat.png";
@@ -18,24 +23,20 @@ import "./Footer.css";
 
 const containerArr = [
   {
-    img: <HomeIcon />,
-    link: "/",
+    img: <GrHomeRounded />,
+    link: "",
   },
   {
-    img: <StoreMallDirectoryIcon />,
-    link: "/allvendors",
+    img: <AiOutlineGift />,
+    link: "",
   },
   {
-    img: <ShoppingCartIcon />,
-    link: "/cart",
+    img: <AiOutlineGift />,
+    link: "",
   },
   {
-    img: <LocalMallIcon />,
-    link: "/malls",
-  },
-  {
-    img: <LocalOfferIcon />,
-    link: "/sales",
+    img: <AiOutlineGift />,
+    link: "",
   },
 ];
 

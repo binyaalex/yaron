@@ -161,6 +161,9 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  /* height: 110px;
+  box-shadow: 0px -20px 77px -15px rgba(0, 0, 0, 0.13);
+  border-radius: 40px 40px 0px 0px; */
 }
 
 .footer .sosAndGray {
@@ -200,7 +203,8 @@
 }
 
 .footer .grayIconLink > svg {
-  color: var(--gray);
+  color: var(--secondry);
+  font-size: 27px;
 }
 
 .footer .grayIconLinkActive > svg {
