@@ -34,6 +34,24 @@ export default function HotBenefitList(props) {
       image: hotBenefit1,
       category: "סטנדאפ",
     },
+    {
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+    },
+    {
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+    },
+    {
+      title: "עידן אלתרמן",
+      price: 79,
+      image: hotBenefit1,
+      category: "סטנדאפ",
+    },
   ]
   useEffect(() => {
     dispatch(getMerchants());
