@@ -20,7 +20,7 @@ import HotBenefitList from "./HotBenefitList";
 
 import Art from "../../assets/images/art.jpg";
 import "./dashboard.css";
-import Pagination from "./pagination";
+import BasicPagination from "./BasicPagination";
 import OtherCategories from "./otherCategories/OtherCategories";
 
 //icons
@@ -278,7 +278,7 @@ export default function Dashboard() {
           </Tabs> */}
           {/*</ScrollingCarousel>*/}
 
-          {/* <div className="product-block">
+          <div className="product-block">
             <ul className="product-Module">
               {filterProducts.length > 0
                 ? currentFilterProducts.map((product) => (
@@ -336,24 +336,24 @@ export default function Dashboard() {
                                   </>
                                 )}
                               </span>
-                            </div> */}
+                            </div>
                             {/*<h5 className="product-box__name">*/}
                             {/*  3 {t("boxSimple")}{" "}*/}
                             {/*</h5>*/}
-                          {/* </div>
+                          </div>
                         </div>
                       </li>
                     </>
                   ))
                 : t("No products")}
-            </ul> */}
+            </ul>
             {/* <ChatBot /> */}
-            {/* <Pagination
+            <BasicPagination
               productsPerPage={productsPerPage}
               totalProducts={filterProducts.length}
               paginate={paginate}
             />
-          </div> */}
+          </div>
         </div>
       </div>
     </>

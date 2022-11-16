@@ -149,6 +149,10 @@ div[data-arrow="right"] {
 /* --- Product Tabs --- */
 .product-block {
   margin-bottom: 10px;
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-Module {
